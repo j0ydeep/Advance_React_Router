@@ -1,16 +1,22 @@
-import React, { lazy } from "react";
+import React, { Suspense } from "react";
 
 import { BrowserRouter } from "react-router-dom";
 
-// const Routes = lazy(() => import("./components/app routes/Routes.jsx"));
+import { Provider } from "react-redux";
+
+import { store } from "./reduxStore/reduxStore.js";
 
 import Routes from "./components/appRoutes/Routes.jsx";
 
 const App = () => {
   return (
-    <BrowserRouter>
-      <Routes />
-    </BrowserRouter>
+    <Suspense>
+      <Provider store={store}>
+        <BrowserRouter>
+          <Routes />
+        </BrowserRouter>
+      </Provider>
+    </Suspense>
   );
 };
 

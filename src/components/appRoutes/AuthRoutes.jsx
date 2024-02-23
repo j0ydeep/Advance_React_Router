@@ -3,7 +3,7 @@ import { React, lazy } from "react";
 // COMPONENTS
 const Login = lazy(() => import("../pages/Login/index.jsx"));
 
-const SignUp = lazy(() => import("../pages/SignUp/index.jsx"));
+const SignUp = lazy(() => import('../pages/SignUp/index.jsx'));
 
 import AuthLaylout from "../Layout/AuthLayout/index.jsx";
 
